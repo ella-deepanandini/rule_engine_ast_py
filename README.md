@@ -2,21 +2,31 @@
 summary: Its demonstrates a simple rule engine system that evaluates user eligibility based on a set of dynamic rules.The system is built using three layers
 there are Data layer , Rule layer , and Service layer.The rules are safely evaluated using PYTHON ABSTRACT SYNTAX TREES(AST) allowing the system to process
 rules written as strings..
+
+
 It Consists of 3 layers:   1)Data Layer (User Class)
                            2)Rule Layer (Rule Engine Class)
                            3)Service Layer ( Eligibility Service)
+
+                           
 * AST safe evaluation (safe eval class)
+
+  
 1)Data Layer : Its stores user information.
   * __init__ : Initializes user attributes(age,department,income,spend)
   * to _dict : Convert user data to a dictonary.
+    
 2)Rule Layer : This rules are combined using logical operator(and)
   * Manages rules using AST
   * add_rule : add rules("age>18")
   * combine_rules : combine rules with "and" "or"
   * evaluate_rules : evaluate combined rules against user code.
+    
 3)Service Layer : This layer ties the user data & the rule engine together
  * The check_eligibility method first converts the user data to a dictonary & then uses the rule engine to evaluate weather the user satisfies the combined rules.
 Additional Component :  Safe eval : AST  node visitors for safe rule evaluation...
+
+
 Work Flow :
 * Create a rule engine instance.
 * Define rules(age,dept,income,spend).
